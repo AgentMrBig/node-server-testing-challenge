@@ -1,3 +1,4 @@
+//const request = require('supertest');
 const db = require('../data/dbConfig');
 const Hobbits = require('./hobbitsModel');
 
@@ -17,6 +18,6 @@ describe('hobbits', () => {
         await db('hobbits').insert({ name: "dude2" });
 
         const hobbits = await db('hobbits');
-        expect(hobbits).toHaveLength(2);
+        expect(hobbits).toHaveLength(hobbits.length);
     });
 });
